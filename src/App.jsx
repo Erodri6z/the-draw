@@ -27,9 +27,6 @@ function App() {
   return (
     <>
     <div>
-      <h2>
-        this is gonna be home page
-      </h2>
       {
         selected.map((c) => 
           <li>{c}</li>
