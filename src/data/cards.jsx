@@ -1,4 +1,4 @@
-const cards = [
+const deck = [
   "The Fool",
   "The Magician",
   "The High Priestess",
@@ -23,4 +23,4 @@ const cards = [
   "The World",
 ]
 
-export default cards
+export default deck
