@@ -5,9 +5,15 @@ import './App.css'
 
 function App() {
   const [selected, setSelected] = useState([])
+  console.log(selected)
 
   const drawCards = () => {
-    
+    let cards = []
+    while (cards.length < 3) {
+      cards.push(deck[Math.floor(Math.random() * deck.length)])
+    }
+    setSelected(cards)
+    console.log("cards selected", cards)
   }
 
   return (
