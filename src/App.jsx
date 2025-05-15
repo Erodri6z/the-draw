@@ -10,7 +10,10 @@ function App() {
   const drawCards = () => {
     let cards = []
     while (cards.length < 3) {
-      cards.push(deck[Math.floor(Math.random() * deck.length)])
+      let card = deck[Math.floor(Math.random() * deck.length)]
+      if (!cards.includes(card)) {
+        cards.push(card)
+      }
     }
     setSelected(cards)
     console.log("cards selected", cards)
