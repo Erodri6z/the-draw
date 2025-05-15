@@ -12,7 +12,12 @@ function App() {
     while (cards.length < 3) {
       let card = deck[Math.floor(Math.random() * deck.length)]
       if (!cards.includes(card)) {
-        cards.push(card)
+        if (Math.floor(Math.random() < 0.5) === 0) {
+          let flipped = `${card}(Upsidedown)`
+          cards.push(flipped)
+        } else {
+          cards.push(card)
+        }
       }
     }
     setSelected(cards)
@@ -25,6 +30,11 @@ function App() {
       <h2>
         this is gonna be home page
       </h2>
+      {
+        selected.map((c) => 
+          <li>{c}</li>
+        )
+      }
       <button onClick={() => drawCards()}>Click to start</button>
     </div>
     </>
