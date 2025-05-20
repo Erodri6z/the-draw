@@ -1,10 +1,23 @@
+import { useEffect, useState } from "react"
+
 const questions = () => {
+
+  const [spiritualData, setSpiritualData] = useState({
+    horoscope: "",
+    relationship: "",
+    emotion: "",
+    goal: ""
+  })
+
+  const getHoroscope = () => {
+
+  }
   return (
     <>
     <form>
     <div>
-      <label htmlFor="dob">Date of Birth</label>
-      <input type="date"/>
+      <label>Date of Birth</label>
+      <input type="date" id="dob"/>
       </div>
       <div>
       <label>Relationship Status</label>
