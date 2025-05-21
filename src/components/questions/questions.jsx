@@ -50,35 +50,39 @@ const Questions = () => {
         name="relationship"
         handleChange={handleChange}
       >
-        <option>Single</option>
-        <option>Taken</option>
-        <option>It's Complicated</option>
+        <option value="in a relationship">Taken</option>
+        <option value="single">Single</option>
+        <option value="well, it's complicated">It's Complicated</option>
       </select>
       </div>
       <div>
       <label>How Do You Feel</label>
-      <select name="" id="">
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
+      <select name="emotion" >
+        <option value="joyful">Joyful</option>
+        <option value="anxious">Anxious</option>
+        <option value="hopeful">Hopeful</option>
+        <option value="lonely">Lonely</option>
+        <option value="burned out">Burned Out</option>
+        <option value="depressed">Depressed</option>
+        <option value="lost">Lost</option>
+        <option value="nostalgic">Nostalgic</option>
+        <option value="angry">Angry</option>
       </select>
       </div>
       <div>
       <label>Personal Goal</label>
-      <select name="" id="">
-      <option>Make Money</option>
-      <option>Better Career</option>
-      <option>Finding Love</option>
-      <option>Letting Go Of The Past</option>
-      <option>Finding Purpose</option>
-      <option>Opening My Heart</option>
-      <option>Healing</option>
-      <option>Trusting Myself</option>
-      <option>Connecting with the Universe</option>
-      <option>Reclaiming Myself</option>
-      <option>Living More Authentically</option>
+      <select name="goal">
+      <option value="1">Make Money</option>
+      <option value="2">Better Career</option>
+      <option value="3">Finding Love</option>
+      <option value="4">Letting Go Of The Past</option>
+      <option value="5">Finding Purpose</option>
+      <option value="6">Opening My Heart</option>
+      <option value="7">Healing</option>
+      <option value="8">Trusting Myself</option>
+      <option value="9">Connecting with the Universe</option>
+      <option value="10">Reclaiming Myself</option>
+      <option value="11">Living More Authentically</option>
       </select>
       </div>
     </form>
