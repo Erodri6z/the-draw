@@ -29,8 +29,10 @@ const Questions = () => {
     })
   }
 
-  const handleChange = () => {
-
+  const handleChange = (e) => {
+    setSpiritualData({...spiritualData,
+      [e.target.name] : e.target.value
+    })
   }
 
 
