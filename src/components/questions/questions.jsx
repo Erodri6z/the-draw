@@ -27,6 +27,9 @@ const Questions = () => {
       ...spiritualData,
       horoscope : getHoroscope(e.target.value)
     })
+  }
+
+  const handleChange = () => {
 
   }
 
@@ -43,15 +46,40 @@ const Questions = () => {
       </div>
       <div>
       <label>Relationship Status</label>
-      <input type="selection"/>
+      <select 
+        name="relationship"
+        handleChange={handleChange}
+      >
+        <option>Single</option>
+        <option>Taken</option>
+        <option>It's Complicated</option>
+      </select>
       </div>
       <div>
       <label>How Do You Feel</label>
-      <input type="text"/>
+      <select name="" id="">
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+      </select>
       </div>
       <div>
       <label>Personal Goal</label>
-      <input type="text"/>
+      <select name="" id="">
+      <option>Make Money</option>
+      <option>Better Career</option>
+      <option>Finding Love</option>
+      <option>Letting Go Of The Past</option>
+      <option>Finding Purpose</option>
+      <option>Opening My Heart</option>
+      <option>Healing</option>
+      <option>Trusting Myself</option>
+      <option>Connecting with the Universe</option>
+      <option>Reclaiming Myself</option>
+      <option>Living More Authentically</option>
+      </select>
       </div>
     </form>
 
