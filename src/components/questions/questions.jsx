@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
+import zodiacSigns from "../../data/horoscopes"
 
-const questions = () => {
+const Questions = () => {
 
   const [spiritualData, setSpiritualData] = useState({
     horoscope: "",
@@ -9,9 +10,20 @@ const questions = () => {
     goal: ""
   })
 
-  const getHoroscope = () => {
+  const getHoroscope = (dateString) => {
+    const date = new Date(dateString)
+    console.log(date)
+    const month = (date.getMonth() + 1).toString().padStart(2, "0")
+    const day = date.getDate().toString().padStart(2, "0")
+    const formatted = `${month}-${day}`
 
+    return zodiacSigns.find(({ start, end }) => {
+      return formatted >= start && formatted <= end
+    })?.sign || "Unknown"
   }
+
+
+
   return (
     <>
     <form>
@@ -36,3 +48,5 @@ const questions = () => {
     </>
   )
 }
+
+export default Questions

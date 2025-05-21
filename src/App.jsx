@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import deck from './data/cards'
+import questions from './components/questions/questions'
 
 import './App.css'
+import Questions from './components/questions/questions'
 
 function App() {
   const [selected, setSelected] = useState([])
@@ -34,6 +36,7 @@ function App() {
       }
       <button onClick={() => drawCards()}>Click to start</button>
     </div>
+    <Questions />
     </>
   )
 }
