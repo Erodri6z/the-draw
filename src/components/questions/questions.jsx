@@ -41,6 +41,10 @@ const Questions = () => {
     </div>
     <form>
     <div>
+      <label>Gender</label>
+      <button>Male</button>
+      <button>Female</button>
+      <button>Other</button>
       <label>Date of Birth</label>
       <input type="date" id="dob" name="dob" onChange={handleDob}/>
       </div>
