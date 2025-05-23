@@ -49,7 +49,7 @@ const Questions = () => {
 
   const handleChange = (e) => {
     setSpiritualData({...spiritualData,
-      [e.target.name] : value
+      [e.target.name] : e.target.value
     })
   }
 
@@ -71,7 +71,7 @@ const Questions = () => {
       <label>Relationship Status</label>
       <select 
         name="relationship"
-        handleChange={handleChange}
+        onChange={handleChange}
       >
         <option value="in a relationship">Taken</option>
         <option value="single">Single</option>
@@ -82,7 +82,7 @@ const Questions = () => {
       <label>How Do You Feel</label>
       <select 
       name="emotion"
-      handleChange={handleChange}>
+      onChange={handleChange}>
         <option value="joyful">Joyful</option>
         <option value="anxious">Anxious</option>
         <option value="hopeful">Hopeful</option>
@@ -97,7 +97,7 @@ const Questions = () => {
       <div>
       <label>Personal Goal</label>
       <select name="goal"
-      handleChange={handleChange}>
+      onChange={handleChange}>
       <option value="1">Make Money</option>
       <option value="2">Better Career</option>
       <option value="3">Finding Love</option>
