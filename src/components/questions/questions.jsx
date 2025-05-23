@@ -7,8 +7,17 @@ const Questions = () => {
     horoscope: "",
     relationship: "",
     emotion: "",
-    goal: ""
+    goal: "",
+    gender: "",
   })
+
+  useEffect(() => {
+    if (!spiritualData.gender) {
+      setGender("Non-Binary");
+    }
+  }, [])
+
+  console.log(spiritualData)
 
   const getHoroscope = (dateString) => {
     const date = new Date(dateString)
@@ -29,12 +38,20 @@ const Questions = () => {
     })
   }
 
-  const handleChange = (e) => {
-    setSpiritualData({...spiritualData,
-      [e.target.name] : e.target.value
-    })
+  const setGender = (g) => {
+    if (spiritualData.gender !== g){
+      setSpiritualData({
+        ...spiritualData,
+        gender : g
+      })
+    }
   }
 
+  const handleChange = (e) => {
+    setSpiritualData({...spiritualData,
+      [e.target.name] : value
+    })
+  }
 
   return (
     <>
@@ -44,9 +61,9 @@ const Questions = () => {
     <form>
     <div>
       <label>Gender</label>
-      <button>Male</button>
-      <button>Female</button>
-      <button>Other</button>
+      <button onClick={() => setGender("Male")}>Male</button>
+      <button onClick={() => setGender("Female")}>Female</button>
+      <button onClick={() => setGender("Non-Binary")}>Other</button>
       <label>Date of Birth</label>
       <input type="date" id="dob" name="dob" onChange={handleDob}/>
       </div>
@@ -63,7 +80,9 @@ const Questions = () => {
       </div>
       <div>
       <label>How Do You Feel</label>
-      <select name="emotion" >
+      <select 
+      name="emotion"
+      handleChange={handleChange}>
         <option value="joyful">Joyful</option>
         <option value="anxious">Anxious</option>
         <option value="hopeful">Hopeful</option>
@@ -77,7 +96,8 @@ const Questions = () => {
       </div>
       <div>
       <label>Personal Goal</label>
-      <select name="goal">
+      <select name="goal"
+      handleChange={handleChange}>
       <option value="1">Make Money</option>
       <option value="2">Better Career</option>
       <option value="3">Finding Love</option>
