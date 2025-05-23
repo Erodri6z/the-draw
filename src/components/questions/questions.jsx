@@ -73,6 +73,7 @@ const Questions = () => {
         name="relationship"
         onChange={handleChange}
       >
+        <option value="">Select One</option>
         <option value="in a relationship">Taken</option>
         <option value="single">Single</option>
         <option value="well, it's complicated">It's Complicated</option>
@@ -83,6 +84,7 @@ const Questions = () => {
       <select 
       name="emotion"
       onChange={handleChange}>
+        <option value="">Select One</option>
         <option value="joyful">Joyful</option>
         <option value="anxious">Anxious</option>
         <option value="hopeful">Hopeful</option>
@@ -98,21 +100,21 @@ const Questions = () => {
       <label>Personal Goal</label>
       <select name="goal"
       onChange={handleChange}>
-      <option value="1">Make Money</option>
-      <option value="2">Better Career</option>
-      <option value="3">Finding Love</option>
-      <option value="4">Letting Go Of The Past</option>
-      <option value="5">Finding Purpose</option>
-      <option value="6">Opening My Heart</option>
-      <option value="7">Healing</option>
-      <option value="8">Trusting Myself</option>
-      <option value="9">Connecting with the Universe</option>
-      <option value="10">Reclaiming Myself</option>
-      <option value="11">Living More Authentically</option>
+        <option value="">Select One</option>
+        <option value="1">Make Money</option>
+        <option value="2">Better Career</option>
+        <option value="3">Finding Love</option>
+        <option value="4">Letting Go Of The Past</option>
+        <option value="5">Finding Purpose</option>
+        <option value="6">Opening My Heart</option>
+        <option value="7">Healing</option>
+        <option value="8">Trusting Myself</option>
+        <option value="9">Connecting with the Universe</option>
+        <option value="10">Reclaiming Myself</option>
+        <option value="11">Living More Authentically</option>
       </select>
       </div>
     </form>
-
     </>
   )
 }
