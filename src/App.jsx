@@ -28,7 +28,6 @@ function App() {
 
   return (
     <>
-      <img src="https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg" alt="https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg" />
     <div>
       {
         selected.map((c) => 
