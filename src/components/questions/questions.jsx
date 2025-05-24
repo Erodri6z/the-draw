@@ -53,9 +53,62 @@ const Questions = () => {
     })
   }
 
+
+  const setStarSign = (sign) => {
+    const container = document.getElementById("star-sign-con")
+    let svg = ""
+
+    switch (sign) {
+      case "Capricorn":
+        svg = ``
+        break
+      case "Aquarius":
+        svg = ``
+        break
+      case "Pisces":
+        svg = ``
+        break
+      case "Aries":
+        svg = ``
+        break
+      case "Taurus":
+        svg = ``
+        break
+      case "Gemini":
+        svg = ``
+        break
+      case "Cancer":
+        svg = ``
+        break
+      case "Leo":
+        svg = ``
+        break
+      case "Virgo":
+        svg = ``
+        break
+      case "Libra":
+        svg = ``
+        break
+      case "Scorpio":
+        svg = ``
+        break
+      case "Sagittarius":
+        svg = ``
+        break
+      default:
+        svg = "<h2>?</h2>"
+      break
+    }
+    container.innerHTML = svg
+  }
+
+
   return (
     <>
     <div>
+      <h3>
+        
+      </h3>
       <h2>{spiritualData.horoscope}</h2>
     </div>
       <label>Gender</label>
