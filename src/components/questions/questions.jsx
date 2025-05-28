@@ -60,40 +60,40 @@ const Questions = () => {
 
     switch (sign) {
       case "Capricorn":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-capricorn"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4a3 3 0 0 1 3 3v9" /><path d="M7 7a3 3 0 0 1 6 0v11a3 3 0 0 1 -3 3" /><path d="M16 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /></svg>`
         break
       case "Aquarius":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-aquarius"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10l3 -3l3 3l3 -3l3 3l3 -3l3 3" /><path d="M3 17l3 -3l3 3l3 -3l3 3l3 -3l3 3" /></svg>`
         break
       case "Pisces":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-pisces"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 3a21 21 0 0 1 0 18" /><path d="M19 3a21 21 0 0 0 0 18" /><path d="M5 12l14 0" /></svg>`
         break
       case "Aries":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-aries"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5a5 5 0 1 0 -4 8" /><path d="M16 13a5 5 0 1 0 -4 -8" /><path d="M12 21l0 -16" /></svg>`
         break
       case "Taurus":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-taurus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 3a6 6 0 0 0 12 0" /><path d="M12 15m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" /></svg>`
         break
       case "Gemini":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-gemini"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 3a21 21 0 0 0 18 0" /><path d="M3 21a21 21 0 0 1 18 0" /><path d="M7 4.5l0 15" /><path d="M17 4.5l0 15" /></svg>`
         break
       case "Cancer":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-cancer"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M18 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M3 12a10 6.5 0 0 1 14 -6.5" /><path d="M21 12a10 6.5 0 0 1 -14 6.5" /></svg>`
         break
       case "Leo":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-leo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 17a4 4 0 1 0 8 0" /><path d="M6 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M11 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M7 7c0 3 2 5 2 9" /><path d="M15 7c0 4 -2 6 -2 10" /></svg>`
         break
       case "Virgo":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-virgo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4a2 2 0 0 1 2 2v9" /><path d="M5 6a2 2 0 0 1 4 0v9" /><path d="M9 6a2 2 0 0 1 4 0v10a7 5 0 0 0 7 5" /><path d="M12 21a7 5 0 0 0 7 -5v-2a3 3 0 0 0 -6 0" /></svg>`
         break
       case "Libra":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-libra"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 20l14 0" /><path d="M5 17h5v-.3a7 7 0 1 1 4 0v.3h5" /></svg>`
         break
       case "Scorpio":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-scorpio"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4a2 2 0 0 1 2 2v9" /><path d="M5 6a2 2 0 0 1 4 0v9" /><path d="M9 6a2 2 0 0 1 4 0v10a3 3 0 0 0 3 3h5l-3 -3m0 6l3 -3" /></svg>`
         break
       case "Sagittarius":
-        svg = ``
+        svg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-zodiac-sagittarius"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20l16 -16" /><path d="M13 4h7v7" /><path d="M6.5 12.5l5 5" /></svg>`
         break
       default:
         svg = "<h2>?</h2>"
@@ -106,12 +106,15 @@ const Questions = () => {
   return (
     <>
     <div>
-      <h3>
+      <div id="star-sign-con">
         
-      </h3>
+      </div>
       <h2>{spiritualData.horoscope}</h2>
     </div>
       <label>Gender</label>
+      <div>
+        
+      </div>
       <br />
       <button onClick={() => setGender("Male")}>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
