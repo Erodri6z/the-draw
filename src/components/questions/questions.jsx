@@ -23,7 +23,10 @@ const Questions = () => {
     }
   }, [spiritualData.horoscope])
 
+  let prompt = `Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`
+
   console.log(spiritualData)
+  console.log("prompt = ", prompt)
 
   const getHoroscope = (dateString) => {
     const date = new Date(dateString)
@@ -152,7 +155,7 @@ const Questions = () => {
         <option value="">Select One</option>
         <option value="in a relationship">Taken</option>
         <option value="single">Single</option>
-        <option value="well, it's complicated">It's Complicated</option>
+        <option value=", well, it's complicated">It's Complicated</option>
       </select>
       </div>
       <div>
