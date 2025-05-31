@@ -177,17 +177,17 @@ const Questions = () => {
       <select name="goal"
       onChange={handleChange}>
         <option value="">Select One</option>
-        <option value="1">Make Money</option>
-        <option value="2">Better Career</option>
-        <option value="3">Finding Love</option>
-        <option value="4">Letting Go Of The Past</option>
-        <option value="5">Finding Purpose</option>
-        <option value="6">Opening My Heart</option>
-        <option value="7">Healing</option>
-        <option value="8">Trusting Myself</option>
-        <option value="9">Connecting with the Universe</option>
-        <option value="10">Reclaiming Myself</option>
-        <option value="11">Living More Authentically</option>
+        <option value="to make more money">Make Money</option>
+        <option value="to get a better career">Better Career</option>
+        <option value="to find true love">Finding Love</option>
+        <option value="to let go of the past">Letting Go Of The Past</option>
+        <option value="to find purpose in life">Finding Purpose</option>
+        <option value="to open my heart to new opportunities">Opening My Heart</option>
+        <option value="to heal myself">Healing</option>
+        <option value="to learn to trust myself">Trusting Myself</option>
+        <option value="to better connect with the universe">Connecting with the Universe</option>
+        <option value="to reclaim myself">Reclaiming Myself</option>
+        <option value="to live more authentically">Living More Authentically</option>
       </select>
       </div>
     </form>
