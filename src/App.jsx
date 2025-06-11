@@ -14,7 +14,7 @@ function App() {
       let card = deck[Math.floor(Math.random() * deck.length)].name
       if (!cards.includes(card)) {
         if (Math.floor(Math.random() < 0.5) === 0) {
-          let flipped = `${card}(Upsidedown)`
+          let flipped = `${card} (Upsidedown)`
           cards.push(flipped)
         } else {
           cards.push(card)
