@@ -1,11 +1,7 @@
-const drawnCard = () => {
+const DrawnCard = ({ slug }) => {
   return (
-  <>
-  <div>
-    <img src={`localhost:3001/api/tarot/${slug}`} alt="card" />
-  </div>
-  </>
+    <img src={`http://localhost:3001/api/tarot/${slug}`} alt="card" />
   )
 }   
 
-export default drawnCard
+export default DrawnCard

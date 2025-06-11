@@ -3,6 +3,7 @@ import deck from './data/cards'
 
 import './App.css'
 import Questions from './components/questions/questions'
+import DrawnCard from './components/drawnCards/drawCard'
 
 function App() {
   const [selected, setSelected] = useState([])
@@ -32,8 +33,10 @@ function App() {
     <div>
       {
         selected.map((c) => 
-          <li>{c.name}</li>
-
+          <>
+            <DrawnCard slug={c.image} />
+            <li>{c.name}</li>
+          </>
         )
       }
       <button onClick={() => drawCards()}>Click to start</button>
