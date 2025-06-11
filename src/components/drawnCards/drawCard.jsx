@@ -2,7 +2,7 @@ const drawnCard = () => {
   return (
   <>
   <div>
-    <img src="#" alt="#" srcset="#" />
+    <img src={`localhost:3001/api/tarot/${slug}`} alt="card" />
   </div>
   </>
   )

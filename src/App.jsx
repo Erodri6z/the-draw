@@ -11,11 +11,13 @@ function App() {
   const drawCards = () => {
     let cards = []
     while (cards.length < 3) {
-      let card = deck[Math.floor(Math.random() * deck.length)].name
+      let card = deck[Math.floor(Math.random() * deck.length)]
       if (!cards.includes(card)) {
         if (Math.floor(Math.random() < 0.5) === 0) {
-          let flipped = `${card} (Upsidedown)`
-          cards.push(flipped)
+          let flipped = `${card.name} (Upsidedown)`
+          cards.push({
+            name: flipped,
+            inage: card.image})
         } else {
           cards.push(card)
         }
@@ -30,7 +32,8 @@ function App() {
     <div>
       {
         selected.map((c) => 
-          <li>{c}</li>
+          <li>{c.name}</li>
+
         )
       }
       <button onClick={() => drawCards()}>Click to start</button>
