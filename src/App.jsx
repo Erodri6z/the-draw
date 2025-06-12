@@ -63,6 +63,8 @@ function App() {
     return cards
   }
 
+  const isFormComplete = Object.values(spiritualData).every(v => v && v.trim() !== "")
+
   return (
     <>
     <div className='card-display'>
@@ -74,8 +76,19 @@ function App() {
         )
       }
     </div>
+    { isFormComplete? 
     <button onClick={() => handlePrompt(prompt)}>Click to start</button>
+    :
+    <p>fill out the form please</p>
+    }
+    {selected.length === 0?
     <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
+    :
+    <>
+    <p>ai reading here</p>
+    <button onClick={() => setSelected([])}>Again?</button>
+    </>
+    }
     </>
   )
 }
