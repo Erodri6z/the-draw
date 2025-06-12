@@ -7,6 +7,9 @@ import DrawnCard from './components/drawnCards/drawCard'
 
 function App() {
   const [selected, setSelected] = useState([])
+  const [prompt, setPrompt] = useState("")
+
+
   console.log(selected)
 
   const drawCards = () => {
@@ -40,7 +43,7 @@ function App() {
       }
     </div>
     <button onClick={() => drawCards()}>Click to start</button>
-    <Questions />
+    <Questions prompt={prompt}/>
     </>
   )
 }
