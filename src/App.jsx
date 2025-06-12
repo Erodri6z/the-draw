@@ -37,7 +37,7 @@ function App() {
       {
         selected.map((c) => 
           <>
-            <DrawnCard slug={c.image} key={c.name}/>
+            <DrawnCard slug={c} key={c.name}/>
           </>
         )
       }
