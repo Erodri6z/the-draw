@@ -18,7 +18,7 @@ function App() {
           let flipped = `${card.name} (Upsidedown)`
           cards.push({
             name: flipped,
-            inage: card.image})
+            image: card.image})
         } else {
           cards.push(card)
         }
