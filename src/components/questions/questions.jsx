@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react"
 import zodiacSigns from "../../data/horoscopes"
 
-const Questions = () => {
-
-  const [spiritualData, setSpiritualData] = useState({
-    horoscope: "",
-    relationship: "",
-    emotion: "",
-    goal: "",
-    gender: "",
-  })
-
+const Questions = ({setSpiritualData, spiritualData}) => {
+  
   useEffect(() => {
     if (!spiritualData.gender) {
       setGender("Non-Binary")

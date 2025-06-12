@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import deck from './data/cards'
 
 import './App.css'
@@ -7,8 +7,21 @@ import DrawnCard from './components/drawnCards/drawCard'
 
 function App() {
   const [selected, setSelected] = useState([])
-  const [prompt, setPrompt] = useState("")
+  const [prompt, setPrompt] = useState()
+  const [spiritualData, setSpiritualData] = useState({
+  horoscope: "",
+  relationship: "",
+  emotion: "",
+  goal: "",
+  gender: "",
+  })
 
+  useEffect(() => {
+    let prompt = `Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`
+    setPrompt(prompt)
+  }, [spiritualData])
+
+  
 
   console.log(selected)
 
@@ -43,7 +56,7 @@ function App() {
       }
     </div>
     <button onClick={() => drawCards()}>Click to start</button>
-    <Questions prompt={prompt}/>
+    <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
     </>
   )
 }
