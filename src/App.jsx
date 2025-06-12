@@ -30,17 +30,16 @@ function App() {
 
   return (
     <>
-    <div>
+    <div className='card-display'>
       {
         selected.map((c) => 
           <>
-            <DrawnCard slug={c.image} />
-            <li>{c.name}</li>
+            <DrawnCard slug={c.image} key={c.name}/>
           </>
         )
       }
-      <button onClick={() => drawCards()}>Click to start</button>
     </div>
+    <button onClick={() => drawCards()}>Click to start</button>
     <Questions />
     </>
   )

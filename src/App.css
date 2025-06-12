@@ -4,7 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
-
+.card-display {
+  display: flex;
+  flex-direction: row;
+  
+}
 .logo {
   height: 6em;
   padding: 1.5em;
