@@ -19,9 +19,13 @@ function App() {
   useEffect(() => {
     let prompt = `Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`
     setPrompt(prompt)
-  }, [spiritualData])
+  }, [])
 
-  
+  const handlePrompt = ( p, c) => {
+    drawCards()
+    setPrompt(`${p} These are my cards: ${c[0].name}, ${c[1].name} and ${c[2].name}`)
+    console.log("final prompt : ", prompt)
+  }
 
   console.log(selected)
 
@@ -55,7 +59,7 @@ function App() {
         )
       }
     </div>
-    <button onClick={() => drawCards()}>Click to start</button>
+    <button onClick={() => handlePrompt(prompt, selected)}>Click to start</button>
     <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
     </>
   )
