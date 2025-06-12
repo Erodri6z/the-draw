@@ -17,17 +17,33 @@ function App() {
   })
 
   useEffect(() => {
-    let prompt = `Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`
-    setPrompt(prompt)
-  }, [])
+    let newPrompt = `Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`
+    setPrompt(newPrompt)
+  }, [spiritualData])
 
-  const handlePrompt = ( p, c) => {
-    drawCards()
-    setPrompt(`${p} These are my cards: ${c[0].name}, ${c[1].name} and ${c[2].name}`)
-    console.log("final prompt : ", prompt)
+  const reset = () => {
+    setPrompt("")
+    setSpiritualData({
+      horoscope: "",
+      relationship: "",
+      emotion: "",
+      goal: "",
+      gender: "",
+    })
   }
 
-  console.log(selected)
+  const handlePrompt = ( p ) => {
+    const newCards = drawCards()
+    setSelected(newCards)
+    const finalPrompt = `${p} These are my cards: ${newCards[0].name}, ${newCards[1].name} and ${newCards[2].name}`
+    setPrompt(finalPrompt)
+    console.log("final prompt : ", finalPrompt)
+
+    reset()
+  }
+
+  console.log(`Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`)
+
 
   const drawCards = () => {
     let cards = []
@@ -44,8 +60,7 @@ function App() {
         }
       }
     }
-    setSelected(cards)
-    console.log("cards selected", cards)
+    return cards
   }
 
   return (
@@ -59,7 +74,7 @@ function App() {
         )
       }
     </div>
-    <button onClick={() => handlePrompt(prompt, selected)}>Click to start</button>
+    <button onClick={() => handlePrompt(prompt)}>Click to start</button>
     <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
     </>
   )
