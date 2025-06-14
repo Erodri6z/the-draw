@@ -6,6 +6,9 @@ import Questions from './components/questions/questions'
 import DrawnCard from './components/drawnCards/drawCard'
 
 function App() {
+  const [user, setUser] = useState(authService.getUser())
+  const [posts, setPosts] = useState([])
+  const navigate = useNavigate()
   const [selected, setSelected] = useState([])
   const [prompt, setPrompt] = useState()
   const [spiritualData, setSpiritualData] = useState({
@@ -20,6 +23,17 @@ function App() {
     let newPrompt = `Hi, I identify as ${spiritualData.gender}, I'm a ${spiritualData.horoscope} and relationship wise I am ${spiritualData.relationship}. Lately I have been feeling ${spiritualData.emotion}. My personal goal is ${spiritualData.goal}`
     setPrompt(newPrompt)
   }, [spiritualData])
+
+  const handleSignupOrLogin = () => {
+    setUser(authService.getUser())
+  }
+
+  const handleLogout = () => {
+    authService.logout()
+    setUser(null)
+    navigate('/')
+  }
+
 
   const reset = () => {
     setPrompt("")
