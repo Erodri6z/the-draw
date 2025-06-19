@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import deck from './data/cards'
-
+import { Route, Routes, useNavigate } from 'react-router';
 import './App.css'
 import Questions from './components/questions/questions'
 import DrawnCard from './components/drawnCards/drawCard'
+import * as authService from './services/authService'
+import * as profileService from "./services/profileService"
+import Landing from './pages/landing/landing';
+import Nav from './components/nav/nav';
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -80,29 +84,44 @@ function App() {
   const isFormComplete = Object.values(spiritualData).every(v => v && v.trim() !== "")
 
   return (
+    // <>
+    // {/* <Routes>
+    //   <Route></Route>
+    // </Routes> */}
+
+    // <div className='card-display'>
+    //   {
+    //     selected.map((c) => 
+    //       <>
+    //         <DrawnCard slug={c} key={c.name}/>
+    //       </>
+    //     )
+    //   }
+    // </div>
+    // { isFormComplete? 
+    // <button onClick={() => handlePrompt(prompt)}>Click to start</button>
+    // :
+    // <p>fill out the form please</p>
+    // }
+    // {selected.length === 0?
+    // <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
+    // :
+    // <>
+    // <p>ai reading here</p>
+    // <button onClick={() => setSelected([])}>Again?</button>
+    // </>
+    // }
+    // </>
     <>
-    <div className='card-display'>
-      {
-        selected.map((c) => 
-          <>
-            <DrawnCard slug={c} key={c.name}/>
-          </>
-        )
+    <Nav />
+    <Routes>
+      <Route 
+      path="/"
+      element={
+        <Landing />
       }
-    </div>
-    { isFormComplete? 
-    <button onClick={() => handlePrompt(prompt)}>Click to start</button>
-    :
-    <p>fill out the form please</p>
-    }
-    {selected.length === 0?
-    <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
-    :
-    <>
-    <p>ai reading here</p>
-    <button onClick={() => setSelected([])}>Again?</button>
-    </>
-    }
+      />
+    </Routes>
     </>
   )
 }
