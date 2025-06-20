@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react'
 import deck from './data/cards'
 import { Route, Routes, useNavigate } from 'react-router';
 import './App.css'
-import Questions from './components/questions/questions'
-import DrawnCard from './components/drawnCards/drawCard'
 import * as authService from './services/authService'
 import * as profileService from "./services/profileService"
-import Landing from './pages/landing/landing';
-import Nav from './components/nav/nav';
+import Landing from './pages/landing/landing'
+import Nav from './components/nav/nav'
+import ReadingPage from './pages/readingPage/readingPage';
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -120,6 +119,20 @@ function App() {
       element={
         <Landing />
       }
+      />
+      <Route
+      path="/reading"
+        element={
+          <ReadingPage
+            spiritualData={spiritualData}
+            setSpiritualData={setSpiritualData}
+            handlePrompt={handlePrompt}
+            prompt={prompt}
+            selected={selected}
+            setSelected={setSelected}
+            isFormComplete={isFormComplete}
+          />
+        }
       />
     </Routes>
     </>
