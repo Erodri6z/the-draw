@@ -3,7 +3,7 @@ import React from 'react'
 import LoginForm from '../../components/loginForm/loginForm'
 
 
-const Login = props => {
+const Login = (props) => {
   
   const [message, setMessage] = useState([''])
 

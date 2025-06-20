@@ -30,10 +30,10 @@ const LoginForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className="container"
     >
       <div className="inputContainer">
-        <label htmlFor="email" className="labe">Email</label>
+        <label htmlFor="email" className="label">Email</label>
         <br />
         <input
           type="text"

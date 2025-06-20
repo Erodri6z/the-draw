@@ -6,7 +6,9 @@ import * as authService from './services/authService'
 import * as profileService from "./services/profileService"
 import Landing from './pages/landing/landing'
 import Nav from './components/nav/nav'
-import ReadingPage from './pages/readingPage/readingPage';
+import ReadingPage from './pages/readingPage/readingPage'
+import Login from './pages/login/login'
+import Signup from './pages/signup/signup'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -83,34 +85,6 @@ function App() {
   const isFormComplete = Object.values(spiritualData).every(v => v && v.trim() !== "")
 
   return (
-    // <>
-    // {/* <Routes>
-    //   <Route></Route>
-    // </Routes> */}
-
-    // <div className='card-display'>
-    //   {
-    //     selected.map((c) => 
-    //       <>
-    //         <DrawnCard slug={c} key={c.name}/>
-    //       </>
-    //     )
-    //   }
-    // </div>
-    // { isFormComplete? 
-    // <button onClick={() => handlePrompt(prompt)}>Click to start</button>
-    // :
-    // <p>fill out the form please</p>
-    // }
-    // {selected.length === 0?
-    // <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData}/>
-    // :
-    // <>
-    // <p>ai reading here</p>
-    // <button onClick={() => setSelected([])}>Again?</button>
-    // </>
-    // }
-    // </>
     <>
     <Nav />
     <Routes>
@@ -131,6 +105,22 @@ function App() {
             selected={selected}
             setSelected={setSelected}
             isFormComplete={isFormComplete}
+          />
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <Signup 
+            handleSignupOrLogin={handleSignupOrLogin} 
+          />
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <Login 
+            handleSignupOrLogin={handleSignupOrLogin} 
           />
         }
       />
