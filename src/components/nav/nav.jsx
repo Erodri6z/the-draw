@@ -1,12 +1,13 @@
+import './nav.css'
 const Nav = () => {
   return (
     <>
     <nav>
-      <h1> The Draw</h1>
-      <ul>
-        <li>About</li>
-        <li>Login</li>
-        <li>Sign Up</li>
+      <ul className="nav-items">
+        <li className='list-items'>The Draw</li>
+        <li className="list-items">About</li>
+        <li className="list-items">Login</li>
+        <li className="list-items">Sign Up</li>
       </ul>
     </nav>
     </>
