@@ -95,7 +95,9 @@ function App() {
       <Route 
       path="/"
       element={
-        <Landing />
+        <Landing 
+        user={user}
+        />
       }
       />
       <Route
