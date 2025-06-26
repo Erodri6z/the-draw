@@ -12,10 +12,10 @@ import Signup from './pages/signup/signup'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
-  const [posts, setPosts] = useState([])
   const navigate = useNavigate()
   const [selected, setSelected] = useState([])
   const [prompt, setPrompt] = useState()
+  const [response, setResponse] = useState("")
   const [spiritualData, setSpiritualData] = useState({
   horoscope: "",
   relationship: "",
