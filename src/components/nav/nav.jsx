@@ -4,10 +4,26 @@ const Nav = () => {
     <>
     <nav>
       <ul className="nav-items">
-        <li className='list-items'>The Draw</li>
-        <li className="list-items">About</li>
-        <li className="list-items">Login</li>
-        <li className="list-items">Sign Up</li>
+        <li className='list-items'>
+          <a href="/">
+            The Draw
+          </a>
+        </li>
+        <li className="list-items">
+          <a href="/about">
+            About
+          </a>
+        </li>
+        <li className="list-items">
+          <a href="/login">
+            Login
+          </a>
+        </li>
+        <li className="list-items">
+          <a href="/signup">
+            Sign Up
+          </a>
+        </li>
       </ul>
     </nav>
     </>
