@@ -14,7 +14,8 @@ async function getReading(prompt) {
     })
     
     const data = await res.json()
-    return data.res
+    console.log(data)
+    return data.response
   } catch (error) {
     console.error('Error Getting ai reponse:', error.message)
     throw error

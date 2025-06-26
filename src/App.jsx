@@ -3,7 +3,7 @@ import deck from './data/cards'
 import { Route, Routes, useNavigate } from 'react-router';
 import './App.css'
 import * as authService from './services/authService'
-import * as profileService from "./services/profileService"
+import * as openAiService from './services/openAiService'
 import Landing from './pages/landing/landing'
 import Nav from './components/nav/nav'
 import ReadingPage from './pages/readingPage/readingPage'
@@ -51,13 +51,14 @@ function App() {
     })
   }
 
-  const handlePrompt = ( p ) => {
+  const handlePrompt = async ( p ) => {
     const newCards = drawCards()
     setSelected(newCards)
     const finalPrompt = `${p} These are my cards: ${newCards[0].name}, ${newCards[1].name} and ${newCards[2].name}`
     setPrompt(finalPrompt)
     console.log("final prompt : ", finalPrompt)
-
+    let reading = await openAiService.getReading(finalPrompt)
+    setResponse(reading)
     reset()
   }
 
@@ -105,6 +106,7 @@ function App() {
             selected={selected}
             setSelected={setSelected}
             isFormComplete={isFormComplete}
+            response={response}
           />
         }
       />

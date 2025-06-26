@@ -1,5 +1,6 @@
 import DrawnCard from '../../components/drawnCards/drawCard'
 import Questions from '../../components/questions/questions'
+import * as openAiService from '../../services/openAiService' 
 
 const ReadingPage = ({
   spiritualData, 
@@ -8,7 +9,8 @@ const ReadingPage = ({
   prompt, 
   selected, 
   setSelected, 
-  isFormComplete 
+  isFormComplete,
+  response
   }) => {
   return (
     <>
@@ -30,7 +32,8 @@ const ReadingPage = ({
               <DrawnCard slug={c} key={c.name} />
             ))}
           </div>
-          <p>AI reading goes here</p>
+          <p>{response}</p>
+          <button onClick={() => openAiService.getReading(prompt)}>Generate Reading</button>
           <button onClick={() => setSelected([])}>Again?</button>
         </>
       )}
