@@ -87,7 +87,10 @@ function App() {
 
   return (
     <>
-    <Nav />
+    <Nav
+    user={user}
+    handleLogout={handleLogout}
+    />
     <Routes>
       <Route 
       path="/"

@@ -1,7 +1,23 @@
 import './nav.css'
-const Nav = () => {
+const Nav = ({ user, handleLogout }) => {
   return (
     <>
+    {user?
+    <nav>
+      <ul className="nav-items">
+        <li className='list-items'>
+          <a href="/">
+            The Draw
+          </a>
+        </li>
+        <li className='list-items'>
+          <button onClick={() => handleLogout()}>
+            Log Out
+          </button>
+        </li>
+      </ul>
+    </nav>
+    :
     <nav>
       <ul className="nav-items">
         <li className='list-items'>
@@ -26,6 +42,7 @@ const Nav = () => {
         </li>
       </ul>
     </nav>
+    }
     </>
   )
 }
