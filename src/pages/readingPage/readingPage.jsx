@@ -1,6 +1,6 @@
 import DrawnCard from '../../components/drawnCards/drawCard'
 import Questions from '../../components/questions/questions'
-import * as openAiService from '../../services/openAiService' 
+import './readingPage.css'
 
 const ReadingPage = ({
   spiritualData, 
@@ -35,7 +35,9 @@ const ReadingPage = ({
           </div>
           {response?
             <>
-            <p>{response}</p>
+            <div className='reading-text'>
+              <p>{response}</p>
+            </div>
             <button onClick={() => setSelected([])}>Again?</button></>
           :
             <p>Loading...</p>
