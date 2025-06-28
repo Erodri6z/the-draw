@@ -12,6 +12,7 @@ const ReadingPage = ({
   isFormComplete,
   response
   }) => {
+
   return (
     <>
     <div className="reading-container">
@@ -32,9 +33,13 @@ const ReadingPage = ({
               <DrawnCard slug={c} key={c.name} />
             ))}
           </div>
-          <p>{response}</p>
-          <button onClick={() => openAiService.getReading(prompt)}>Generate Reading</button>
-          <button onClick={() => setSelected([])}>Again?</button>
+          {response?
+            <>
+            <p>{response}</p>
+            <button onClick={() => setSelected([])}>Again?</button></>
+          :
+            <p>Loading...</p>
+          }
         </>
       )}
     </div>
@@ -43,3 +48,4 @@ const ReadingPage = ({
 }
 
 export default ReadingPage
+
