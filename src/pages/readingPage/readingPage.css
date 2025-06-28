@@ -6,9 +6,17 @@
 }
 
 .reading-text, .card-display{
-  width: 500px;
+  /* width: fit-content; */
   margin: 0 auto;
   padding: 10px;
+}
+
+.reading-text {
+  width: 400px;
+}
+
+.card-display{
+  width: fit-content;
 }
 
 

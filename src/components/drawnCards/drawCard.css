@@ -1,0 +1,9 @@
+.card {
+  width: 150px;
+  height: 250px;
+}
+
+
+.upsidedown-card{
+  transform: rotate(180deg)
+}

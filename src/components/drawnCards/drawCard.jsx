@@ -9,12 +9,12 @@ const DrawnCard = ({slug}) => {
   {
     slug.name.includes('(Upsidedown)')?
     <div key={slug}>
-      <img src={`${BASE_URL}/api/tarot/${slug.image}`} alt="card" className="upsidedown-card card" style={{ width: "150px", height: "250px", transform: "rotate(180deg)" }} />
+      <img src={`${BASE_URL}/api/tarot/${slug.image}`} alt="card" className="upsidedown-card card" />
     </div>
 
     :
     <div key={slug}>
-      <img src={`${BASE_URL}/api/tarot/${slug.image}`} alt="card" className="upright-card card" style={{ width: "150px", height: "250px" }} />
+      <img src={`${BASE_URL}/api/tarot/${slug.image}`} alt="card" className="upright-card card" />
     </div>
 
   }
