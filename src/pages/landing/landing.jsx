@@ -1,3 +1,5 @@
+import './landing.css'
+
 const Landing = ({ user }) => {
   return (
     <>
@@ -13,6 +15,7 @@ const Landing = ({ user }) => {
     </div>
     :
     <div>
+      <img src="/theDrawEdit.png" alt="The Draw" className="main-logo"/>
       <h2> Welcome to The Draw</h2>
       <h4>Please Sign In To Continue</h4>
       <a href="/Login">
