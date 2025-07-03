@@ -5,3 +5,12 @@
   drop-shadow(-2px 2px  #ffffff)drop-shadow(-2px -2px  #ffffff)
 }
 
+.login-or-signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-a, .signup-a{
+  margin: 10px;
+}
