@@ -33,7 +33,7 @@ const ReadingPage = ({
               <DrawnCard slug={c} key={c.name} />
             ))}
           </div>
-          {response?
+          {response?  
             <>
             <div className='reading-text'>
               <p>{response}</p>

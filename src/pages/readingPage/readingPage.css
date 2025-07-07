@@ -12,11 +12,11 @@
 }
 
 .reading-text {
-  width: 400px;
+  width: 600px;
 }
 
 .card-display{
-  width: fit-content;
+  width: max-content;
 }
 
 

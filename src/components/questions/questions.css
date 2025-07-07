@@ -1,0 +1,28 @@
+.symbols{
+  display: flex;
+  justify-content: center;
+}
+
+.form{
+  padding: 10px;
+
+}
+
+.form-entry{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.entry{
+  width: 200px;
+  color: violet;
+  background-color: black;
+  border: 0px;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.calander {
+  
+}

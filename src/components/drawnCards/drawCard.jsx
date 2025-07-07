@@ -15,7 +15,7 @@ const DrawnCard = ({slug}) => {
     >
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <p>Click to Reveal</p>
+          <img src="/theDrawEdit.png" alt="The Draw" className='card-logo'/>
         </div>
         <div className="flip-card-back">
           {

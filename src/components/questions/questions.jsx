@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import zodiacSigns from "../../data/horoscopes"
+import './questions.css'
 
 const Questions = ({setSpiritualData, spiritualData}) => {
 
@@ -14,6 +15,12 @@ const Questions = ({setSpiritualData, spiritualData}) => {
       setStarSign(spiritualData.horoscope)
     }
   }, [spiritualData.horoscope])
+
+  useEffect(() => {
+    if (spiritualData.gender) {
+      setGenderSymbol(spiritualData.gender)
+    }
+  }, [spiritualData.gender])
 
 
   const getHoroscope = (dateString) => {
@@ -100,18 +107,42 @@ const Questions = ({setSpiritualData, spiritualData}) => {
     container.innerHTML = svg
   }
 
+  const setGenderSymbol = (g) => {
+    const container = document.getElementById("gender-sign-con")
+    let svg = ""
+    switch (g) {
+      case "Male":
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+          </svg>`
+        break
+      case "Female":
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"/>
+        </svg> `
+        break
+      default:
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="currentColor" class="bi bi-gender-ambiguous" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z"/>
+          </svg>`
+      break
+    }
+    container.innerHTML = svg
+  }
+
 
   return (
     <>
     <div>
-      <div id="star-sign-con">
+      <div className="symbols">
 
+      <div id="star-sign-con">
       </div>
-      <h2>{spiritualData.horoscope}</h2>
+      <div id="gender-sign-con">
+      </div>
+      </div>
     </div>
-      <label>Gender</label>
       <div>
-        
       </div>
       <br />
       <button onClick={() => setGender("Male")}>
@@ -127,18 +158,19 @@ const Questions = ({setSpiritualData, spiritualData}) => {
       <button onClick={() => setGender("Female")}>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5"/>
-        </svg> 
+        </svg>
       </button>
-    <form>
-    <div>
+    <form className="form">
+    <div className="form-entry">
       <label>Date of Birth</label>
-      <input type="date" id="dob" name="dob" onChange={handleDob}/>
+      <input type="date" className="entry calander" id="dob" name="dob" onChange={handleDob}/>
       </div>
-      <div>
+      <div className="form-entry">
       <label>Relationship Status</label>
       <select 
         name="relationship"
         onChange={handleChange}
+        className="entry"
       >
         <option value="">Select One</option>
         <option value="in a relationship">Taken</option>
@@ -146,10 +178,11 @@ const Questions = ({setSpiritualData, spiritualData}) => {
         <option value=", well, it's complicated">It's Complicated</option>
       </select>
       </div>
-      <div>
+      <div className="form-entry">
       <label>How Do You Feel</label>
       <select 
       name="emotion"
+      className="entry"
       onChange={handleChange}>
         <option value="">Select One</option>
         <option value="joyful">Joyful</option>
@@ -163,9 +196,10 @@ const Questions = ({setSpiritualData, spiritualData}) => {
         <option value="angry">Angry</option>
       </select>
       </div>
-      <div>
+      <div className="form-entry">
       <label>Personal Goal</label>
       <select name="goal"
+      className="entry"
       onChange={handleChange}>
         <option value="">Select One</option>
         <option value="to make more money">Make Money</option>
