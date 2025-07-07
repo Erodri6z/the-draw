@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as authService from '../../services/authService'
+import './loginForm.css'
 
 const LoginForm = props => {
   const [formData, setFormData] = useState({
@@ -42,6 +43,7 @@ const LoginForm = props => {
           value={formData.email}
           name="email"
           onChange={handleChange}
+          className="inputs"
         />
       </div>
       <div className="inputContainer">
@@ -54,12 +56,14 @@ const LoginForm = props => {
           value={formData.pw}
           name="pw"
           onChange={handleChange}
+          className="inputs"
+
         />
       </div>
-      <div>
+      <div className='btns'>
         <button className="button">Log In</button>
         <Link to="/">
-          <button className="cancel">Cancel</button>
+          <button className=" button cancel">Cancel</button>
         </Link>
       </div>
     </form>

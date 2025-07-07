@@ -1,0 +1,33 @@
+.container {
+  margin: auto;
+  padding: 10px;
+}
+
+.inputContainer{
+  margin: 10px auto ;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.btns{
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 400px;
+}
+
+.inputs{
+  width: 200px;
+  color: violet;
+  background-color: black;
+  border: 2px solid violet;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.button{
+  color: violet;
+  background-color: black;
+  border: 2px solid violet;
+}
