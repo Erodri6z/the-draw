@@ -1,6 +1,6 @@
 footer{
-  position: sticky;
+  position: absolute;
+  margin: auto;
   bottom: 0px;
   padding: 2px;
-  background-color: rgba(0, 0, 0, 0.246);
 }
