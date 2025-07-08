@@ -36,7 +36,7 @@ const ReadingPage = ({
           {response?  
             <>
             <div className='reading-text'>
-              <p>{response}</p>
+              <p className='response'>{response}</p>
             </div>
             <button onClick={() => setSelected([])}>Again?</button></>
           :
