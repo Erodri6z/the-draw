@@ -88,3 +88,21 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 480px) {
+  .card-display{
+    width: 100%;
+  }
+  
+  .flip-card {
+    max-width: 100px;
+    height: 200px;
+  }
+  .card{
+    height: 200px;
+    width: 100px;
+  }
+  .card-logo {
+    max-width: 80px;
+  }
+}
