@@ -52,9 +52,9 @@ const SignupForm = props => {
 
 
   return (
-    <form
-    autoComplete="off"
-    onSubmit={handleSubmit}
+    <><form
+      autoComplete="off"
+      onSubmit={handleSubmit}
       className="container"
     >
       <div className="inputContainer">
@@ -67,8 +67,7 @@ const SignupForm = props => {
           value={name}
           name="name"
           className='inputs'
-          onChange={handleChange}
-          />
+          onChange={handleChange} />
       </div>
       <div className="inputContainer">
         <label htmlFor="email" className="label">Email</label>
@@ -80,8 +79,7 @@ const SignupForm = props => {
           value={email}
           name="email"
           className='inputs'
-          onChange={handleChange}
-        />
+          onChange={handleChange} />
       </div>
       <div className="inputContainer">
         <label htmlFor="password" className="label">Password</label>
@@ -93,8 +91,7 @@ const SignupForm = props => {
           value={password}
           name="password"
           className='inputs'
-          onChange={handleChange}
-          />
+          onChange={handleChange} />
       </div>
       <div className="inputContainer">
         <label htmlFor="confirm" className="label">
@@ -108,19 +105,23 @@ const SignupForm = props => {
           value={passwordConf}
           name="passwordConf"
           className='inputs'
-          onChange={handleChange}
-        />
+          onChange={handleChange} />
       </div>
       <div className="inputContainer">
-        
-        <button disabled={isFormInvalid()} className="button" id="btn" >
+
+        <button disabled={isFormInvalid()} className="button" id="btn">
           Sign Up
         </button>
-          <Link to="/">
-            <button className="signupCancel">Cancel</button>
-          </Link>
+        <Link to="/">
+          <button className="signupCancel">Cancel</button>
+        </Link>
       </div>
     </form>
+    <p>
+      Already have an account?  
+      <a href="/login" className='clickHere'> Login</a>
+    </p>
+    </>
   )
 }
 

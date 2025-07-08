@@ -9,6 +9,7 @@ import Nav from './components/nav/nav'
 import ReadingPage from './pages/readingPage/readingPage'
 import Login from './pages/login/login'
 import Signup from './pages/signup/signup'
+import About from './pages/about/about';
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -98,6 +99,12 @@ function App() {
         <Landing 
         user={user}
         />
+      }
+      />
+      <Route
+      path='/about'
+      element={
+        <About />
       }
       />
       <Route

@@ -28,7 +28,7 @@ const LoginForm = props => {
   }
 
   return (
-    <form
+    <><form
       autoComplete="off"
       onSubmit={handleSubmit}
       className="container"
@@ -43,8 +43,7 @@ const LoginForm = props => {
           value={formData.email}
           name="email"
           onChange={handleChange}
-          className="inputs"
-        />
+          className="inputs" />
       </div>
       <div className="inputContainer">
         <label htmlFor="password" className="label">Password</label>
@@ -56,17 +55,16 @@ const LoginForm = props => {
           value={formData.pw}
           name="pw"
           onChange={handleChange}
-          className="inputs"
-
-        />
+          className="inputs" />
       </div>
       <div className='btns'>
         <button className="button">Log In</button>
         <Link to="/">
-          <button className=" button cancel">Cancel</button>
+          <button className="button cancel">Cancel</button>
         </Link>
       </div>
     </form>
+    <p>Don't have an account? <a href="/signup" className='clickHere'>Click Here to make one</a></p></>
   )
 }
 
