@@ -14,7 +14,10 @@
 .reading-text {
   animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   width: 600px;
+}
 
+.response{
+  text-align: left;
 }
 
 .loading{
@@ -60,6 +63,10 @@
     font-size: 0.95rem;
     width: 300px;
   }
+  /* .title{
+    display: none;
+  } */
+
 
   .card-display img {
     max-width: 200px;

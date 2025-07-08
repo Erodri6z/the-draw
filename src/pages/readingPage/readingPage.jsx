@@ -23,7 +23,7 @@ const ReadingPage = ({
   return (
     <>
     <div className="reading-container">
-      <h1>Tarot Reading</h1>
+      <h1 className='title'>Tarot Reading</h1>
       {selected.length === 0 ? (
         <>
           <Questions setSpiritualData={setSpiritualData} spiritualData={spiritualData} />
