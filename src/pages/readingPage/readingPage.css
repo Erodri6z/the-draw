@@ -66,6 +66,9 @@
   /* .title{
     display: none;
   } */
+  .reading-container{
+    width: 100%;
+  }
 
 
   .card-display img {
