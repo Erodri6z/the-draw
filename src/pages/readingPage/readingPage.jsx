@@ -10,9 +10,16 @@ const ReadingPage = ({
   selected, 
   setSelected, 
   isFormComplete,
+  setResponse,
   response
   }) => {
 
+  const resetReading = () => {
+    setResponse("")
+    setSelected([])
+  }
+  
+  console.log("response", response)
   return (
     <>
     <div className="reading-container">
@@ -38,7 +45,7 @@ const ReadingPage = ({
             <div className='reading-text'>
               <p className='response'>{response}</p>
             </div>
-            <button onClick={() => setSelected([])}>Again?</button></>
+            <button onClick={() => resetReading()}>Again?</button></>
           :
             <p>Loading...</p>
           }
