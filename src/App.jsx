@@ -9,7 +9,8 @@ import Nav from './components/nav/nav'
 import ReadingPage from './pages/readingPage/readingPage'
 import Login from './pages/login/login'
 import Signup from './pages/signup/signup'
-import About from './pages/about/about';
+import About from './pages/about/about'
+import Footer from './components/footer/footer';
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -139,6 +140,7 @@ function App() {
         }
       />
     </Routes>
+    <Footer />
     </>
   )
 }
