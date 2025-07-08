@@ -1,4 +1,3 @@
-
 import "./disclaimer.css"
 
 function DisclaimerModal({ onAccept }) {
