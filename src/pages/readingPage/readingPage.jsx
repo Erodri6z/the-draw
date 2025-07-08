@@ -47,7 +47,7 @@ const ReadingPage = ({
             </div>
             <button onClick={() => resetReading()}>Again?</button></>
           :
-            <p>Loading...</p>
+            <img src="/theDrawEdit.png" alt="The Draw" className="loading" />
           }
         </>
       )}
