@@ -3,7 +3,7 @@ const Nav = ({ user, handleLogout }) => {
   return (
     <>
     {user?
-    <nav>
+    <nav className='nav'>
       <ul className="nav-items">
         <li className='list-items'>
           <a href="/">
@@ -23,7 +23,7 @@ const Nav = ({ user, handleLogout }) => {
       </ul>
     </nav>
     :
-    <nav>
+    <nav className='nav'>
       <ul className="nav-items">
         <li className='list-items'>
           <a href="/">

@@ -1,14 +1,19 @@
 
+.nav{
+  width: 90dvw;
+}
 .logo {
+  margin-left: -10px;
   width:44px;
   height: 44px;
 }
 .nav-items {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
+
 .list-items {
   list-style: none;
 }
