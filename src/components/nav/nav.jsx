@@ -10,6 +10,11 @@ const Nav = ({ user, handleLogout }) => {
           <img src="/theDrawEdit.png" alt="The Draw" className='logo'/>
           </a>
         </li>
+        <li className="list-items">
+          <a href="/about">
+            About
+          </a>
+        </li>
         <li className='list-items'>
           <button onClick={() => handleLogout()}>
             Log Out
