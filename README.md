@@ -1,13 +1,49 @@
-# React + Vite
+# The Draw
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A modern tarot card reading web app that offers intuitive 3-card readings powered by OpenAI. Users can ask spiritual or introspective questions, receive symbolic interpretations, and explore personal insights — all wrapped in a mysterious, neon-tinged aesthetic.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- 🔮 Three-card tarot readings based on user input
+- ✨ Card flip animations with custom styles
+- 💬 AI-generated interpretations using OpenAI
+- 📱 Mobile-friendly design
+- 🧑‍💻 User authentication (sign up/login)
 
-## Expanding the ESLint configuration
+## Deployment
+- **[Deployed App (Currently In Beta)](https://thedraw.netlify.app/)**
+- **[Back-end Repo](https://github.com/Erodri6z/the-draw-backend)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# the-draw
+## Technologies and Tools Used
+### Frameworks 
+- **MongoDB** 
+- **Express.js** 
+- **React.js**
+- **Node.js**
+
+### Tools For Planning
+- **Canva** - for logo design.
+- **Whimsical** - for wireframing.
+- **Trello** - for project managment.
+- **Notion** - for project notes.
+- **Bootstrap** - for icons.
+- **ColorSpace** - for gradient/color pallet.
+
+### APIs and Databases
+- **Cloudinary** - for image storage.
+- **MongoDB Atlas** - for storing user profiles and session data.
+- **OpenAi** - for generating tarot interpretations using GPT.
+
+
+### Deployment 
+- **Netlify** - Front end
+- **Fly.io** - Back end 
+
+
+## IceBox
+- [ ] Customizable tarot spreads (Celtic Cross, One Card, etc.)
+- [ ] Better Interface for readings
+- [ ] Share Via Social Media
+- [ ] Add new Top Secret Features
+
