@@ -1,5 +1,7 @@
 # The Draw
 
+![Landing Page](./src/assets/landing.png)
+
 ## Overview
 A modern tarot card reading web app that offers intuitive 3-card readings powered by OpenAI. Users can ask spiritual or introspective questions, receive symbolic interpretations, and explore personal insights — all wrapped in a mysterious, neon-tinged aesthetic.
 
@@ -10,6 +12,8 @@ A modern tarot card reading web app that offers intuitive 3-card readings powere
 - 💬 AI-generated interpretations using OpenAI
 - 📱 Mobile-friendly design
 - 🧑‍💻 User authentication (sign up/login)
+
+![question](./src/assets/questions.png)
 
 ## Deployment
 - **[Deployed App (Currently In Beta)](https://thedraw.netlify.app/)**
@@ -39,6 +43,8 @@ A modern tarot card reading web app that offers intuitive 3-card readings powere
 ### Deployment 
 - **Netlify** - Front end
 - **Fly.io** - Back end 
+
+![tarot](./src/assets/reading.png)
 
 
 ## IceBox
