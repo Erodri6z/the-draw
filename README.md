@@ -33,6 +33,7 @@ A modern tarot card reading web app that offers intuitive 3-card readings powere
 - **Notion** - for project notes.
 - **Bootstrap** - for icons.
 - **ColorSpace** - for gradient/color pallet.
+- **Google Fonts** - for fonts.
 
 ### APIs and Databases
 - **Cloudinary** - for image storage.
