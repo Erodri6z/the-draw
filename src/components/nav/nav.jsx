@@ -7,7 +7,7 @@ const Nav = ({ user, handleLogout }) => {
       <ul className="nav-items">
         <li className='list-items'>
           <a href="/">
-          <img src="/theDrawEdit.png" alt="The Draw" className='logo'/>
+          <img src="/theDrawEdit.png" alt="The Draw" className='logo-nav'/>
           </a>
         </li>
         <li className="list-items">
@@ -27,7 +27,7 @@ const Nav = ({ user, handleLogout }) => {
       <ul className="nav-items">
         <li className='list-items'>
           <a href="/">
-          <img src="/theDrawEdit.png" alt="The Draw"  className='logo'/>
+          <img src="/theDrawEdit.png" alt="The Draw"  className='logo-nav'/>
           </a>
         </li>
         <li className="list-items">
