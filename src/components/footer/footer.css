@@ -4,3 +4,16 @@ footer{
   bottom: 0px;
   padding: 2px;
 }
+.coffee-button {
+  background-color: #f000e8;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  display: inline-block;
+}
+.coffee-button:hover {
+  background-color: #ffc107;
+}
