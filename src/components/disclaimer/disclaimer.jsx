@@ -9,7 +9,7 @@ function DisclaimerModal({ onAccept }) {
           This tarot reading app is intended for entertainment, reflection, and personal insight purposes only. The information provided through tarot card readings should not be considered medical, legal, financial, or professional advice.
         </p>
         <p>
-          This app uses artificial intelligence powered by <strong>OpenAI</strong> to generate interpretations and messages. These are created automatically and are not written or reviewed by a human.
+          This tarot reading app is intended for entertainment, reflection, and personal insight purposes only. The information provided through tarot card readings should not be considered medical, legal, financial, or professional advice..
         </p>
         <p>
           By using this app, you agree that you are solely responsible for how you interpret and act on any reading. The creators of this app are <strong>not liable</strong> for any decisions, outcomes, or emotional responses resulting from use.

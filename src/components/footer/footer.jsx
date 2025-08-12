@@ -5,7 +5,7 @@ const Footer = () => {
     <>
     <footer>
       <p>Powered By OpenAi</p>
-      <a href="#" target="_blank"  rel="noopener noreferrer" class="coffee-button">
+      <a href="https://ko-fi.com/gloomyspirit" target="_blank"  rel="noopener noreferrer" class="coffee-button">
         ☕ Buy me a coffee
       </a>
     </footer>
