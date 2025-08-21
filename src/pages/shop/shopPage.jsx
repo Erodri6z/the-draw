@@ -7,7 +7,7 @@ const ShopPage = () => {
     <>
     <div className="shop">
       <h1>Want to Support?</h1>
-      <h2 className="title">Check Out My Amazon Picks</h2>
+      <h2 className="title">Check Out <br /> My Amazon Picks</h2>
       <div className="products">
         {affiliateDetes.map((a) => (
           <ShopCard props={a} key={a.pickName}/>
