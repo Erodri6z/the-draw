@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <>
     <footer>
-      <a href="https://ko-fi.com/gloomyspirit" target="_blank"  rel="noopener noreferrer" className="coffee-button">
-        ☕ Buy me a coffee
+      <a href="/support">
+        <button>Want To Show Support?</button>
       </a>
       <p>Powered By OpenAi</p>
     </footer>
