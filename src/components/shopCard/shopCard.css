@@ -11,3 +11,13 @@
   padding: 10px;
   border: 1px solid #d000ff;
 }
+
+@media (max-width: 480px) {
+  .pickCard{
+    height: 200px;
+  }
+  .thumbnail{
+    height: 100px;
+    width: 100px;
+  }
+}
