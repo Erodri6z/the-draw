@@ -15,6 +15,7 @@
 @media (max-width: 480px) {
   .pickCard{
     height: 200px;
+    width: 200px;
   }
   .thumbnail{
     height: 100px;

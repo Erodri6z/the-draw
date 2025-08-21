@@ -6,7 +6,7 @@ const ShopPage = () => {
   return (
     <>
     <div className="shop">
-      <h1>Want to Support?</h1>
+      <h1 className="mainTitle">Want to Support?</h1>
       <h2 className="title">Check Out <br /> My Amazon Picks</h2>
       <div className="products">
         {affiliateDetes.map((a) => (
