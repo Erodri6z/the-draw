@@ -41,7 +41,7 @@ body {
   margin: 0;
   place-items: center;
   min-width: 320px;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
@@ -72,5 +72,9 @@ button:focus-visible {
 @media (max-width: 480px) {
   :root{
     width: 99%;
+  }
+  
+  body{
+    max-height: 100vh;
   }
 }
