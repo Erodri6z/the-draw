@@ -5,7 +5,13 @@ const DrawnCard = ({slug}) => {
   const [flipped, setFlipped] = useState(false);
 
   const BASE_URL = import.meta.env.VITE_BACK_END_SERVER_URL
-
+  
+  const handleFlip = () => {
+    setTimeout(() => {
+      setFlipped(true)
+    }, 3000)
+  }
+  handleFlip()
 
   return (
   <>
