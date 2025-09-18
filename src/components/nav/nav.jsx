@@ -35,6 +35,11 @@ const Nav = ({ user, handleLogout }) => {
             About
           </a>
         </li>
+        <li className='list-items'>
+          <a href="/guide">
+            Guide
+          </a>
+        </li>
         <li className="list-items">
           <a href="/login">
             Login
