@@ -12,6 +12,7 @@ import Signup from './pages/signup/signup'
 import About from './pages/about/about'
 import Footer from './components/footer/footer';
 import ShopPage from './pages/shop/shopPage';
+import GuidePage from './pages/guide/guide';
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -145,6 +146,12 @@ function App() {
           <Login 
             handleSignupOrLogin={handleSignupOrLogin} 
           />
+        }
+      />
+      <Route
+        path="/guide"
+        element={
+          <GuidePage /> 
         }
       />
     </Routes>

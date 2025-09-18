@@ -16,6 +16,11 @@ const Nav = ({ user, handleLogout }) => {
           </a>
         </li>
         <li className='list-items'>
+          <a href="/guide">
+            Guide
+          </a>
+        </li>
+        <li className='list-items'>
           <button onClick={() => handleLogout()}>
             Log Out
           </button>
