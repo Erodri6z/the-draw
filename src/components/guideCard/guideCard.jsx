@@ -1,5 +1,6 @@
 import { useState } from "react"
 import deck from "../../data/cards"
+import { getInfo } from "../../services/cardService"
 
 const GuideCard = () => {
   const [options] = useState(deck)
@@ -7,8 +8,9 @@ const GuideCard = () => {
 
     const handleSelect = (e) => {
     const chosen = e.target.value
+    const cardInfo = getInfo(chosen)
     const cardObj = options.find((opt) => opt.name === chosen)
-    setSelected({cardObj})
+    setSelected({cardObj, cardInfo})
   }
 
   return (
