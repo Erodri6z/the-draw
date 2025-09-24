@@ -3,26 +3,33 @@ import deck from "../../data/cards"
 
 const GuideCard = () => {
   const [options] = useState(deck)
-  const [selected, setSelected] = useState()
+  const [selected, setSelected] = useState(null)
+
+    const handleSelect = (e) => {
+    const chosen = e.target.value
+    const cardObj = options.find((opt) => opt.name === chosen)
+    setSelected({cardObj})
+  }
+
   return (
     <>
     <div>
       <h1>Card</h1>
-      <select value={selected} onChange={(e) => setSelected(e.target.value)}>
+      <select value={selected?.cardObj.name || ""} onChange={handleSelect}>
         {options.map((opt, i) => (
           <option key={i} value={opt.name}>
             {opt.name}
           </option>
         ))}
       </select>
-      {/* <div>
-        <img src={card.image} alt="card" />
-        <div>
-          <h4>{data.name}</h4>
-          <p>{data.meaning_up}</p>
-          <p>{data.meaning_rev}</p>
-        </div>
-      </div> */}
+      <div>
+        {
+          selected?
+          <h3>{selected.cardObj.name}</h3>
+          :
+          <h3>name here</h3>
+        }
+      </div>
     </div>
     </>
   )

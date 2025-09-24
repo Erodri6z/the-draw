@@ -8,6 +8,8 @@ const GuidePage = () => {
     <>
     <div>
       <GuideCard />
+      <GuideCard />
+      <GuideCard />
       
     </div>
     </>
