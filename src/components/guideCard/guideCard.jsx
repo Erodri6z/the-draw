@@ -6,9 +6,10 @@ const GuideCard = () => {
   const [options] = useState(deck)
   const [selected, setSelected] = useState(null)
 
-    const handleSelect = (e) => {
+    const handleSelect = async (e) => {
     const chosen = e.target.value
-    const cardInfo = getInfo(chosen)
+    const cardInfo = await getInfo(chosen)
+    console.log("card info ", cardInfo)
     const cardObj = options.find((opt) => opt.name === chosen)
     setSelected({cardObj, cardInfo})
   }
