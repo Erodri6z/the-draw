@@ -31,8 +31,14 @@ const GuideCard = () => {
           <>
             <DrawnCard slug={selected.cardObj} />
             <h3>{selected.cardObj.name}</h3>
-            <h4>Upright: {selected.cardInfo.meaning_up}</h4>
-            <h4>Reversed: {selected.cardInfo.meaning_rev}</h4>
+            <h4 className="bold">Upright</h4>
+            <div className="text-box">
+              <p>{selected.cardInfo.meaning_up}</p>
+            </div>
+            <h4 className="bold">Reversed</h4>
+            <div className="text-box">
+              <p>{selected.cardInfo.meaning_rev}</p>
+            </div>
           </>
         )}
       </div>
