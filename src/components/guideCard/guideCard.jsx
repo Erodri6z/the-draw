@@ -1,6 +1,7 @@
 import { useState } from "react"
 import deck from "../../data/cards"
 import { getInfo } from "../../services/cardService"
+import DrawnCard from "../drawnCards/drawCard"
 
 const GuideCard = () => {
   const [options] = useState(deck)
@@ -16,8 +17,7 @@ const GuideCard = () => {
 
   return (
     <>
-    <div>
-      <h1>Card</h1>
+    <div className="guide-card">
       <select value={selected?.cardObj.name || ""} onChange={handleSelect}>
         {options.map((opt, i) => (
           <option key={i} value={opt.name}>
@@ -25,10 +25,15 @@ const GuideCard = () => {
           </option>
         ))}
       </select>
-      <div>
+      <div className="guide-info">
         {
           selected?
+          <>
+          <DrawnCard slug={selected.cardObj} />
           <h3>{selected.cardObj.name}</h3>
+          <h4>Upright: {selected.cardInfo.meaning_up} </h4>
+          <h4>Reversed: {selected.cardInfo.meaning_rev}</h4>
+          </>
           :
           <h3>name here</h3>
         }
