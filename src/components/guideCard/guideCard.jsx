@@ -23,41 +23,40 @@ const GuideCard = () => {
   };
 
   return (
-    <>
     <div className="guide-card">
-      <select value={selected?.cardObj.name || ""} onChange={handleSelect} className="entry">
-        <option value={null}>Select One</option>
+      <select
+        value={selected?.cardObj?.name || ""}
+        onChange={handleSelect}
+        className="entry"
+      >
+        <option value="">Select One</option>
         {options.map((opt, i) => (
           <option key={i} value={opt.name}>
             {opt.name}
           </option>
         ))}
       </select>
-      <div className="guide-info">
-        {selected && (
-          <>
-            <div className={`card-div ${flipped ? "rev" : ""}`}>
-              <DrawnCard slug={selected.cardObj} />
-            </div>
-            <div>
-              <button onClick={handleToggle}>Flip</button>
-            </div>
-            {flipped?
+
+      {selected && (
+        <div className="guide-info">
+          <div className={`card-div ${flipped ? "rev" : ""}`}>
+            <DrawnCard slug={selected.cardObj} />
+          </div>
+          <button onClick={handleToggle}>Flip</button>
+          {flipped ? (
             <div className="text-box">
-            <h4 className="bold">Reversed</h4>
-              <p>{selected.cardInfo.meaning_rev}</p>
+              <h4 className="bold">Reversed</h4>
+              <p>{selected.cardObj.meaning_rev}</p>
             </div>
-          :
+          ) : (
             <div className="text-box">
-            <h4 className="bold">Upright</h4>
-              <p>{selected.cardInfo.meaning_up}</p>
+              <h4 className="bold">Upright</h4>
+              <p>{selected.cardObj.meaning_up}</p>
             </div>
-          }
-          </>
-        )}
-      </div>
+          )}
+        </div>
+      )}
     </div>
-    </>
   )
 }
 
