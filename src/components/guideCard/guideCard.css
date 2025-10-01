@@ -18,7 +18,9 @@
   font-size: larger;
   margin-bottom: 0px;
 }
-
+.entry{
+  z-index: 9999
+}
 .rev{
   transform: rotate(180deg)
 }
