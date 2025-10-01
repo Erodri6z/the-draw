@@ -7,7 +7,7 @@ import "./guideCard.css"
 const GuideCard = () => {
   const [options] = useState(deck)
   const [flipped, setFlipped] = useState(false);
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState(null)
 
   const handleSelect = async (e) => {
     const chosen = e.target.value
@@ -25,7 +25,8 @@ const GuideCard = () => {
   return (
     <>
     <div className="guide-card">
-      <select value={selected?.cardObj.name || "Select One"} onChange={handleSelect} className="entry">
+      <select value={selected?.cardObj.name || ""} onChange={handleSelect} className="entry">
+        <option value={null}>Select One</option>
         {options.map((opt, i) => (
           <option key={i} value={opt.name}>
             {opt.name}
