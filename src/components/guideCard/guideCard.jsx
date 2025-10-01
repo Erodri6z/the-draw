@@ -26,7 +26,6 @@ const GuideCard = () => {
     <>
     <div className="guide-card">
       <select value={selected?.cardObj.name || ""} onChange={handleSelect} className="entry">
-        <option value="">Select One</option>
         {options.map((opt, i) => (
           <option key={i} value={opt.name}>
             {opt.name}
