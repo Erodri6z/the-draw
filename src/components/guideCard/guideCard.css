@@ -18,9 +18,6 @@
   font-size: larger;
   margin-bottom: 0px;
 }
-.entry{
-  z-index: 9999
-}
 .rev{
   transform: rotate(180deg)
 }
@@ -28,6 +25,10 @@
 
 @media (max-width: 480px) {
   .card-div{
-  padding: 30px;
+    padding: 30px;
+  }
+  .entry{
+    position: relative;
+    z-index: 9999;
   }
 }
