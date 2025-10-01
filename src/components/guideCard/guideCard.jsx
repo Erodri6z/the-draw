@@ -25,7 +25,7 @@ const GuideCard = () => {
   return (
     <>
     <div className="guide-card">
-      <select value={selected?.cardObj.name || ""} onChange={handleSelect} className="entry">
+      <select value={selected?.cardObj.name || ""} onChange={handleSelect} onTouchStart={handleSelect} className="entry">
         <option value={null}>Select One</option>
         {options.map((opt, i) => (
           <option key={i} value={opt.name}>
