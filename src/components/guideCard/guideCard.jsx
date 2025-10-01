@@ -35,20 +35,23 @@ const GuideCard = () => {
       <div className="guide-info">
         {selected && (
           <>
-            <div className={`card-div ${flipped ? "" : "rev"}`}>
+            <div className={`card-div ${flipped ? "rev" : ""}`}>
               <DrawnCard slug={selected.cardObj} />
             </div>
             <div>
               <button onClick={handleToggle}>Flip</button>
             </div>
-            <div className="text-box">
-            <h4 className="bold">Upright</h4>
-              <p>{selected.cardInfo.meaning_up}</p>
-            </div>
+            {flipped?
             <div className="text-box">
             <h4 className="bold">Reversed</h4>
               <p>{selected.cardInfo.meaning_rev}</p>
             </div>
+          :
+            <div className="text-box">
+            <h4 className="bold">Upright</h4>
+              <p>{selected.cardInfo.meaning_up}</p>
+            </div>
+          }
           </>
         )}
       </div>
