@@ -22,3 +22,10 @@
 .rev{
   transform: rotate(180deg)
 }
+
+
+@media (max-width: 480px) {
+  .card-div{
+  padding: 30px;
+  }
+}

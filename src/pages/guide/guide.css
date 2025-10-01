@@ -4,3 +4,17 @@
   align-items: flex-start;
 }
 
+.guide-mobile{
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .guide-page{
+    display: none;
+  }
+  .guide-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

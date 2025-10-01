@@ -11,7 +11,9 @@ const GuidePage = () => {
       <GuideCard />
       <GuideCard />
       <GuideCard />
-      
+    </div>
+    <div className="guide-mobile">
+      <GuideCard />
     </div>
     </>
   )
