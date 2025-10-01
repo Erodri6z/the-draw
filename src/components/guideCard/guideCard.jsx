@@ -7,7 +7,7 @@ import "./guideCard.css"
 const GuideCard = () => {
   const [options] = useState(deck)
   const [flipped, setFlipped] = useState(false);
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState("")
 
   const handleSelect = async (e) => {
     const chosen = e.target.value
