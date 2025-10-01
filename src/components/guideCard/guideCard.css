@@ -25,7 +25,7 @@
   position: relative;
   z-index: 9999;
   pointer-events: auto;
-  -webkit-appearance: menulist-button;
+  -webkit-appearance-: menulist-button;
 }
 
 @media (max-width: 480px) {
