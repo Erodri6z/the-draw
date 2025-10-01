@@ -21,15 +21,15 @@
 .rev{
   transform: rotate(180deg)
 }
-
+.entry {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+  -webkit-appearance: menulist-button;
+}
 
 @media (max-width: 480px) {
   .card-div{
     padding: 30px;
-  }
-  .entry{
-    position: relative;
-    z-index: 9999;
-    pointer-events: auto;
   }
 }
