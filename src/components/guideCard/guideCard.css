@@ -19,3 +19,6 @@
   margin-bottom: 0px;
 }
 
+.rev{
+  transform: rotate(180deg)
+}

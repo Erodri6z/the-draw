@@ -6,15 +6,21 @@ import "./guideCard.css"
 
 const GuideCard = () => {
   const [options] = useState(deck)
+  const [flipped, setFlipped] = useState(false);
   const [selected, setSelected] = useState(null)
 
-    const handleSelect = async (e) => {
+  const handleSelect = async (e) => {
     const chosen = e.target.value
     const cardInfo = await getInfo(chosen)
     console.log("card info ", cardInfo)
     const cardObj = options.find((opt) => opt.name === chosen)
     setSelected({cardObj, cardInfo})
   }
+
+  const handleToggle = () => {
+    setFlipped(!flipped)
+    
+  };
 
   return (
     <>
@@ -29,14 +35,18 @@ const GuideCard = () => {
       <div className="guide-info">
         {selected && (
           <>
-            <DrawnCard slug={selected.cardObj} />
-            <h3>{selected.cardObj.name}</h3>
-            <h4 className="bold">Upright</h4>
+            <div className={`card-div ${flipped ? "" : "rev"}`}>
+              <DrawnCard slug={selected.cardObj} />
+            </div>
+            <div>
+              <button onClick={handleToggle}>Flip</button>
+            </div>
             <div className="text-box">
+            <h4 className="bold">Upright</h4>
               <p>{selected.cardInfo.meaning_up}</p>
             </div>
-            <h4 className="bold">Reversed</h4>
             <div className="text-box">
+            <h4 className="bold">Reversed</h4>
               <p>{selected.cardInfo.meaning_rev}</p>
             </div>
           </>
